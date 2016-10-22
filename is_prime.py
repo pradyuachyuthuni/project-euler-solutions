@@ -7,7 +7,9 @@ def main():
 		print('Argument not passed. Please check again')
 		sys.exit()
 	number = int(args[1])
+	is_prime(number)
 
+def is_prime(number):
 	if number == 2:
 		print("Number is the only even prime.")
 	elif is_even(number):
