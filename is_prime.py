@@ -7,18 +7,19 @@ def main():
 		print('Argument not passed. Please check again')
 		sys.exit()
 	number = int(args[1])
-	is_prime(number)
+	if is_prime(number):
+		print("Number is prime.")
+	else:
+		print("Not a prime.")
 
 def is_prime(number):
-	if number == 2:
-		print("Number is the only even prime.")
-	elif is_even(number):
-		print("Number is not prime, its composite.")
+	if is_even(number):
+		return False
 	else:
-		for i in range(3,number/2,2):
+		for i in range(3,number/2 + 1,2):
 			if number % i == 0:
-				break
-		print("Number is prime.")
+				return False
+		return True
 
 def is_even(num):
 	if num % 2 == 0:
