@@ -1,3 +1,4 @@
+# importing is_prime.py file. it's in git
 import is_prime as ip
 import sys
 

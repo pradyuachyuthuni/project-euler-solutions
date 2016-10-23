@@ -9,20 +9,25 @@ def main():
         input_1 = int(args[1])
         input_2 = int(args[2]) + 1
         max_length_of_series = 1
+	number = 1
 
         for i in range(input_1,input_2):
                 num = i
                 length = 1
                 while num is not 1:
                         if num % 2 is 0:
+				print(num)
                                 num = num / 2
                         else:
+				print(num)
                                 num = 3*num + 1
                         length += 1
+		print("number : "+str(i)+" lenght : "+str(length))
                 if length > max_length_of_series:
                         max_length_of_series = length
-
-        print(max_length_of_series)
+			number = i
+        print(str(number)+" has the maximum Collatx length of "+str(max_length_of_series))
+	
 
 if __name__ == '__main__':
         main()
