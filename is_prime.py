@@ -13,7 +13,9 @@ def main():
 		print("Not a prime.")
 
 def is_prime(number):
-	if is_even(number):
+	if number == 2:
+		return True
+	elif is_even(number):
 		return False
 	else:
 		for i in range(3,number/2 + 1,2):
